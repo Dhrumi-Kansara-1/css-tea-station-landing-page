@@ -100,8 +100,8 @@ font size and media query
   h4 {
     line-height: 1;
   }
-}
-/* more global styles */
+} 
+/* btn */
 .btn {
   background: var(--clr-primary);
   color: var(--clr-white);
@@ -123,6 +123,14 @@ font size and media query
 }
 .clearfix::after, .clearfix::before{
   clear: both;
+}
+/* section title */
+.section-title { 
+  margin-bottom: 2rem;
+}
+.section-title h3{
+  color: var(--clr-primary);
+  font-family: var(--ff-secondary);
 }
 /* 
 ====================
@@ -223,3 +231,9 @@ skills and media query
     width: 25%;
   }
 }
+
+/* 
+======================
+about
+======================
+*/
