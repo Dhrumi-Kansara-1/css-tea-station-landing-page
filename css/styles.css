@@ -189,11 +189,7 @@ skills
   transition: var(--transition);
   text-align: center;
   padding: 2.5rem 0;
-}
-.skill:hover {
-  background: var(--clr-white);
-  box-shadow: 0 2px var(--clr-primary);
-}
+} 
 .skill-icon {
   transition: var(--transition);
   display: inline-block;
@@ -201,6 +197,10 @@ skills
 }
 .skill:hover .skill-icon {
   transform: translateY(-5px);
+}
+.skill:hover {
+  background: var(--clr-white);
+  box-shadow: 0 2px var(--clr-primary);
 }
 .skill-desc {
   color: var(--clr-grey-5);
