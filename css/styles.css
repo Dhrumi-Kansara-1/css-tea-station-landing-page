@@ -73,10 +73,8 @@ h4 {
 p {
   margin-bottom: 1.25rem;
 }
-/* 
-====================
-font size and media query
-====================
+/*  
+font size and media query 
 */
 @media screen and (min-width: 800px) {
   h1 {
@@ -100,12 +98,12 @@ font size and media query
   h4 {
     line-height: 1;
   }
-} 
+}
 /* btn */
 .btn {
   background: var(--clr-primary);
   color: var(--clr-white);
-  padding: 0.75rem 1rem;
+  padding: 0.375rem 0.75rem;
   letter-spacing: var(--spacing-1);
   text-transform: uppercase;
   display: inline-block;
@@ -113,6 +111,7 @@ font size and media query
   font-size: 1rem;
   border: none;
   cursor: pointer;
+  font-size: 0.875rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   /* transition */
   transition: var(--transition);
@@ -121,17 +120,41 @@ font size and media query
   background: var(--clr-primary-light);
   color: var(--clr-primary);
 }
-.clearfix::after, .clearfix::before{
+.clearfix,
+.clearfix::after,
+.clearfix::before {
   clear: both;
 }
 /* section title */
-.section-title { 
+.section-title {
   margin-bottom: 2rem;
 }
-.section-title h3{
+.section-title h3 {
   color: var(--clr-primary);
   font-family: var(--ff-secondary);
 }
+.section-center {
+  padding: 4rem 0;
+  width: 85vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+/* 
+section-center and media query
+*/
+@media screen and (min-width: 992px) {
+  .section-center {
+    margin: 0 auto;
+    padding: 4rem 1rem;
+  }
+}
+
+/* 
+====================
+end of global styles
+====================
+*/
+
 /* 
 ====================
 header
@@ -197,7 +220,7 @@ skills
   transition: var(--transition);
   text-align: center;
   padding: 2.5rem 0;
-} 
+}
 .skill-icon {
   transition: var(--transition);
   display: inline-block;
@@ -216,9 +239,7 @@ skills
   margin: 0 auto;
 }
 /* 
-======================
 skills and media query
-======================
 */
 @media screen and (min-width: 576px) {
   .skill {
@@ -237,3 +258,38 @@ skills and media query
 about
 ======================
 */
+.about-part-img,
+.about-part-info {
+  padding: 2rem 0;
+}
+.about-img-container {
+  background: var(--clr-primary);
+  border: 0.5rem solid var(--clr-primary);
+  max-width: 30rem;
+  /* extra stuff */
+  overflow: hidden;
+}
+.about-img {
+  transition: var(--transition);
+}
+.about-img-container:hover .about-img{
+  opacity: 0.7;
+  transform: scale(1.1); 
+}
+.about-text {
+  max-width: 26rem;
+  color: var(--clr-grey-5);
+}
+/* 
+about and media query
+*/
+
+@media screen and (min-width: 992px) {
+  .about-part-img, .about-part-info {
+    float: left;
+    width: 50%;
+  }
+  .about-part-info {
+    padding-left: 2rem;
+  }
+}
