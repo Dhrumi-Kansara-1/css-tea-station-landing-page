@@ -215,6 +215,7 @@ skills
 */
 .skills {
   background: var(--clr-grey-10);
+  overflow: hidden; 
 }
 .skill {
   transition: var(--transition);
@@ -228,20 +229,22 @@ skills
 }
 .skill:hover .skill-icon {
   transform: translateY(-5px);
-}
+} 
 .skill:hover {
-  background: var(--clr-white);
-  box-shadow: 0 2px var(--clr-primary);
+  background: var(--clr-white); 
 }
 .skill-desc {
   color: var(--clr-grey-5);
   max-width: 17rem;
-  margin: 0 auto;
+  margin: 0 auto; 
 }
 /* 
 skills and media query
 */
 @media screen and (min-width: 576px) {
+  .skills {
+    background: var(--clr-grey-10);
+  }
   .skill {
     float: left;
     width: 50%;
@@ -272,9 +275,9 @@ about
 .about-img {
   transition: var(--transition);
 }
-.about-img-container:hover .about-img{
+.about-img-container:hover .about-img {
   opacity: 0.7;
-  transform: scale(1.1); 
+  transform: scale(1.1);
 }
 .about-text {
   max-width: 26rem;
@@ -283,13 +286,77 @@ about
 /* 
 about and media query
 */
-
 @media screen and (min-width: 992px) {
-  .about-part-img, .about-part-info {
+  .about-part-img,
+  .about-part-info {
     float: left;
     width: 50%;
   }
   .about-part-info {
     padding-left: 2rem;
+  }
+}
+/* 
+======================
+products
+======================
+*/
+.products {
+  background: var(--clr-grey-10); 
+  overflow: hidden;
+}
+.products article {
+  padding: 2rem 0;
+}
+.products-text {
+  color: var(--clr-grey-5);
+  max-width: 26rem;
+}
+.products-inventory {
+  margin-bottom: 1.25rem;
+  font-size: 0.875rem;
+}
+.product {
+  margin-bottom: 2rem; 
+}
+.product-img {
+  border-radius: var(--radius);
+  margin-bottom: 2rem; 
+  object-fit: cover;
+  height: 17rem;
+}
+.product-title {
+  margin-bottom: 0.75rem;
+}
+.product-price {
+  color: var(--clr-primary); 
+}
+/* 
+products and media query
+*/
+@media screen and (min-width: 640px) {
+  .product {
+    float: left;
+    width: 50%;
+    padding-right: 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .product {
+    width: 33.3%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products-info  {
+    float: left; 
+    width: 30%; 
+  } 
+  .products-inventory {
+    float: left; 
+    width: 70%;
+  }
+    .product { 
+      padding: 0 1rem;
+      margin-bottom: 0;
   }
 }
